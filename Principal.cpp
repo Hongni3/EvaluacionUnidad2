@@ -20,3 +20,32 @@ int main(int argc, char const *argv[]){
     }
     return 0;
 }
+
+int main() {
+    float>> notas;
+    while (true) {
+        cout << "1. Agregar nota" << endl;
+        cout << "2. Mostrar notas y promedio" << endl;
+        cout << "3. Mostrar nota más alta y más baja" << endl;
+        cout << "4. Salir" << endl;
+        int opcion;
+        cout << "Ingrese una opción: ";
+        cin >> opcion;
+        switch (opcion) {
+            case 1:
+                 agregarNota();
+                break;
+            case 2:
+                mostrarNotas(notas);
+                break;
+            case 3:
+                mostrarNotaMaxMin(notas);
+                break;
+            case 4:
+                return 0;
+            default:
+                cout << "Opción no válida" << endl;
+                break;
+        }
+    }
+}
